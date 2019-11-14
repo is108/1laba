@@ -7,7 +7,6 @@ urlpatterns = [
     re_path(r'create/$', views.create),
     re_path(r'delete/$', views.delete),
     re_path(r'download/$', views.download),
-    path('upload/', views.upload),
     path('admin/', admin.site.urls),
     re_path(r'^', views.show_files),
 
