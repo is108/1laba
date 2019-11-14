@@ -1,0 +1,9 @@
+<h2>Upload</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<input type="file" name="document">
+<button type="submit">Upload file</button>
+</form>
+with open(save_path + request.FILES['document'].name, 'wb+') as destination:
+            for chunk in request.FILES['document'].chunks():
+                destination.write(chunk)
